@@ -64,7 +64,8 @@ values."
      ;; org
      (shell :variables
              shell-default-height 30
-             shell-default-position 'bottom)
+             shell-default-position 'bottom
+             shell-default-shell 'ansi-term shell-default-term-shell "/usr/local/bin/zsh")
      ;; spell-checking
       syntax-checking
       search-engine
@@ -203,7 +204,7 @@ values."
    dotspacemacs-display-default-layout t
    ;; If non nil then the last auto saved layouts are resume automatically upon
    ;; start. (default nil)
-   dotspacemacs-auto-resume-layouts t
+   dotspacemacs-auto-resume-layouts nil
    ;; Size (in MB) above which spacemacs will prompt to open the large file
    ;; literally to avoid performance issues. Opening a file literally means that
    ;; no major mode or minor modes are active. (default is 1)
@@ -337,8 +338,7 @@ explicitly specified that a variable should be set before a package is loaded,
     web-mode-css-indent-offset 2
     web-mode-code-indent-offset 2
     web-mode-attr-indent-offset 2)
-(add-to-list 'magic-mode-alist 
-          '("\\(import.*from \'react\';\\|\/\/ @flow\nimport.*from \'react\';\\)" . react-mode))
+(add-to-list 'magit-mode-alist '("import\s+[^\s]+\s+from\s+['\"]react['\"]""']']" . react-mode))
 (require 'flycheck-joker)
 (add-to-list 'flycheck-global-modes 'clojure-mode)
 (add-to-list 'flycheck-global-modes 'clojurescript-mode)

@@ -8,7 +8,7 @@ export ZSH=/Users/czylyy/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
-
+unsetopt PROMPT_SP
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -76,6 +76,7 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 export JAVA_HOME="$(/usr/libexec/java_home)"
+export MW_HOME="/Users/czylyy/workspace/wls12130/"
 export QBITS_WLST_UNAME="weblogic"
 export QBITS_WLST_PASS="welcome1"
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
