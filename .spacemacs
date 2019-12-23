@@ -42,9 +42,9 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     (auto-completion :variables 
-                      auto-completion-enable-help-tooltip t 
-                      auto-completion-enable-snippets-in-popup t 
+     (auto-completion :variables
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-sort-by-usage t)
      better-defaults
      emacs-lisp
@@ -56,32 +56,37 @@ values."
                  node-add-modules-path t
                  javascript-fmt-tool 'prettier
                  javascript-backend 'tern)
-     (tern :variables tern-command '("/usr/local/bin/tern" "--no-port-file")
+     (tern :variables tern-command '("tern" "--no-port-file")
            tern-disable-port-files t)
      react
+     typescript
+     prettier
      docker
      java
+     go
      osx
      colors
      themes-megapack
      (clojure :variables
-               clojure-enable-fancify-symbols t)
+               clojure-enable-fancify-symbols t
+               clojure-enable-linters 'joker)
      ;; org
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom
-             shell-default-shell 'ansi-term shell-default-term-shell "/usr/local/bin/zsh")
+             shell-default-shell 'ansi-term shell-default-term-shell "/bin/zsh")
      ;; spell-checking
       syntax-checking
+      restclient
       search-engine
       version-control
+      (terraform :variables terraform-auto-format-on-save t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(flycheck-joker
-                                      react-snippets
+   dotspacemacs-additional-packages '(react-snippets
                                       graphql-mode
                                       nodejs-repl) 
    ;; A list of packages that cannot be updated.
@@ -358,12 +363,10 @@ explicitly specified that a variable should be set before a package is loaded,
 
 (setq projectile-enable-caching t)
 (setq avy-timeout-seconds 0.2)
-(require 'flycheck-joker)
-(add-to-list 'flycheck-global-modes 'clojure-mode)
-(add-to-list 'flycheck-global-modes 'clojurescript-mode)
 (setq prettier-js-args '(
-                         "--single-quote"
+                         "--single-quote" "true"
                          "--trailing-comma" "all"
+                         "--print-width" "100"
                          ))
 
 ;; nodejs-repl
