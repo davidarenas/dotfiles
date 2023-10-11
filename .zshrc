@@ -1,5 +1,7 @@
+export GOPATH=$HOME/go
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PLAN9=/usr/local/plan9
+export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnubin/:~/.local/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$PLAN9/bin:$HOME/.cargo/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -52,7 +54,7 @@ unsetopt PROMPT_SP
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # zsh-syntax-highligthting must be last plugin loaded
-plugins=(git osx colored-man-pages vi-mode cp tmux web-search docker lein mvn svn npm zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git macos colored-man-pages vi-mode cp tmux web-search docker lein mvn svn npm zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,10 +86,19 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias  vi='emacsclient'
+alias  vig='emacsclient -c'
+export EDITOR=emacsclient
 export SPACESHIP_BATTERY_SHOW=false
 export SPACESHIP_VI_MODE_INSERT="I|"
 export SPACESHIP_VI_MODE_NORMAL="N|"
 export SPACESHIP_VI_MODE_COLOR=241
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
+
 
 
 source ~/".oh-my-zsh/custom/themes/spaceship.zsh-theme"
