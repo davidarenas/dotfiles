@@ -10,7 +10,7 @@ return {
     lazy = true,
     opts = { style = "storm" },
   },
-  { "rose-pine/neovim", name = "rose-pine", lazy = false, opts = { variant = "moon" } },
+  { "rose-pine/neovim", name = "rose-pine", lazy = false, opts = { variant = "moon", disable_italics = true } },
   {
     "LazyVim/LazyVim",
     opts = {

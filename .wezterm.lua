@@ -13,9 +13,9 @@ end
 -- This is where you actually apply your config choices
 config.font = wezterm.font(
   'Fira Code',
-  { weight = 450 }
+  { weight = "Medium", stretch="Normal" }
 )
-config.font_size = 13
+config.font_size = 12
 -- For example, changing the color scheme:
 config.color_scheme = 'rose-pine'
 
