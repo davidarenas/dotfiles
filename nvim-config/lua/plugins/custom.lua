@@ -26,7 +26,10 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "clojure",
         "ocaml",
+        "typescript",
+        "tsx"
       })
     end,
   },
+  { import = "lazyvim.plugins.extras.lang.typescript" },
 }
