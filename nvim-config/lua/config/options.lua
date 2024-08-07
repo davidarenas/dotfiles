@@ -3,3 +3,8 @@
 -- Add any additional options here
 --
 vim.g.autoformat = false
+
+if vim.g.neovide then
+	-- vim.g.neovide_transparency = 0.8
+	vim.opt.guifont = { "FiraCode Nerd Font", ":h13" }
+end

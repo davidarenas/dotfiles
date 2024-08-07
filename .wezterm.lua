@@ -12,12 +12,12 @@ end
 
 -- This is where you actually apply your config choices
 config.font = wezterm.font(
-  'Fira Code',
-  { weight = "Medium", stretch="Normal" }
+  'FiraCode Nerd Font',
+  { weight = 'Medium' }
 )
-config.font_size = 12
+config.font_size = 15
 -- For example, changing the color scheme:
-config.color_scheme = 'rose-pine'
+config.color_scheme = 'Kanagawa (Gogh)'
 
 config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
 config.keys = {
