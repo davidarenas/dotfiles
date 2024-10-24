@@ -9,7 +9,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
 unsetopt PROMPT_SP
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -101,4 +101,5 @@ export NVM_DIR="$HOME/.nvm"
 
 
 
-source ~/".oh-my-zsh/custom/themes/spaceship.zsh-theme"
+#source ~/".oh-my-zsh/custom/themes/spaceship.zsh-theme"
+eval "$(starship init zsh)"
