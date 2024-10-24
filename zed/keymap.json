@@ -20,6 +20,8 @@
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
+      "ctrl-a e": "assistant::InlineAssist",
+      "ctrl-a >": "assistant::QuoteSelection",
       "space b": "editor::ToggleGitBlame",
       "shift-k": "editor::Hover",
       "space c f": "editor::Format",

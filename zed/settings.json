@@ -14,6 +14,9 @@
     },
     "version": "2"
   },
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
   "telemetry": {
     "metrics": false
   },
