@@ -31,6 +31,21 @@ config.keys = {
 		action = wezterm.action.SendKey({ key = "a", mods = "CTRL" }),
 	},
 	{
+		key = "c",
+		mods = "LEADER",
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+	},
+	{
+		key = "n",
+		mods = "LEADER",
+		action = wezterm.action.ActivateTabRelative(1),
+	},
+	{
+		key = "p",
+		mods = "LEADER",
+		action = wezterm.action.ActivateTabRelative(-1),
+	},
+	{
 		mods = "LEADER",
 		key = "LeftArrow",
 		action = wezterm.action.ActivatePaneDirection("Left"),
