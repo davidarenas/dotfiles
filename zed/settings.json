@@ -10,7 +10,7 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
@@ -33,37 +33,32 @@
       "prettier": {
         "allowed": true
       },
-      "formatter": {
-        "external": {
-          "command": "eslint --fix",
-          "arguments": ["fmt", "--stdin", "{buffer_path}"]
-        }
-      },
+      "formatter": "language_server",
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
     }
   },
   "experimental.theme_overrides": {
-    "title_bar.background": "#16161D",
-    "status_bar.background": "#16161D",
-    "tab_bar.background": "#16161D",
-    "tab.inactive_background": "#1F1F28",
-    "tab.active_background": "#2A2A37",
-    "toolbar.background": "#2A2A37",
-    "editor.background": "#1F1F28",
-    "editor.gutter.background": "#2A2A37",
-    "editor.active_line.background": "#363646",
-    "editor.foreground": "#DCD7BA",
-    "editor.line_number": "#54546D",
-    "editor.active_line_number": "#DCD7BA",
-    "predictive": "#727169",
-    "panel.background": "#1F1F28",
-    "elevated_surface.background": "#2A2A37",
-    "search.match_background": "#363646",
-
-    "border": "#363646",
-    "border.variant": "#363646"
+    //    "title_bar.background": "#16161D",
+    //    "status_bar.background": "#16161D",
+    //    "tab_bar.background": "#16161D",
+    //    "tab.inactive_background": "#1F1F28",
+    //    "tab.active_background": "#2A2A37",
+    //    "toolbar.background": "#2A2A37",
+    //    "editor.background": "#1F1F28",
+    //    "editor.gutter.background": "#2A2A37",
+    //    "editor.active_line.background": "#363646",
+    //    "editor.foreground": "#DCD7BA",
+    //    "editor.line_number": "#54546D",
+    //    "editor.active_line_number": "#DCD7BA",
+    //    "predictive": "#727169",
+    //    "panel.background": "#1F1F28",
+    //    "elevated_surface.background": "#2A2A37",
+    //    "search.match_background": "#363646",
+    //
+    //    "border": "#363646",
+    //    "border.variant": "#363646"
   },
 
   // allow cursor to reach edges of screen
@@ -96,6 +91,6 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Kanagawa-Dragon"
+    "dark": "Melange Dark"
   }
 }
