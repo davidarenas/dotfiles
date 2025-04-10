@@ -1,6 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-
+local kanagawa = require("colors/kanagawa-dragon");
 -- This table will hold the configuration.
 local config = {}
 
@@ -11,11 +11,16 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-config.font = wezterm.font("FiraCode Nerd Font", { weight = "Medium" })
-config.font_size = 15
+config.font = wezterm.font(
+  'FiraCode Nerd Font Mono',
+  { weight = "Medium" }
+)
+config.max_fps = 120
+config.font_size = 13
 -- For example, changing the color scheme:
-config.color_scheme = "Kanagawa (Gogh)"
+--config.colors = kanagawa
 
+config.color_scheme = 'Kanagawa (Gogh)'
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	{

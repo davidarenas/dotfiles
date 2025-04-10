@@ -10,17 +10,26 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-thinking-latest"
     },
     "version": "2"
   },
   "features": {
-    "inline_completion_provider": "supermaven"
+    //"edit_prediction_provider": "zed"
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "delay": 500
   },
   "telemetry": {
     "metrics": false
   },
   "format_on_save": "off",
+  "preview_tabs": {
+    "enabled": true,
+    "enable_preview_from_file_finder": true,
+    "enable_preview_from_code_navigation": true
+  },
   "cursor_blink": false,
   // use relative line numbers
   "relative_line_numbers": true,
@@ -29,7 +38,7 @@
     "show": "never"
   },
   "languages": {
-    "JavaScript": {
+    /* "JavaScript": {
       "prettier": {
         "allowed": true
       },
@@ -37,7 +46,7 @@
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
-    }
+    }*/
   },
   "experimental.theme_overrides": {
     //          "title_bar.background": "#16161D",
@@ -69,9 +78,9 @@
   },
   "vim_mode": true,
   "ui_font_family": "FiraCode Nerd Font",
-  "ui_font_size": 14,
+  "ui_font_size": 13,
   "buffer_font_family": "FiraCode Nerd Font",
-  "buffer_font_size": 15,
+  "buffer_font_size": 14,
   "buffer_font_weight": 500,
   "git": {
     "inline_blame": {
@@ -91,6 +100,6 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Everforest Dark Hard"
+    "dark": "Kanagawa-Dragon"
   }
 }
