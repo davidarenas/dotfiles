@@ -7,18 +7,48 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "assistant": {
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-latest"
+    },
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
+    "enabled": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-thinking-latest"
+      "model": "claude-opus-4"
     },
     "version": "2"
+  },
+  "language_models": {
+    // "zed.dev": {
+    //   "available_models": [
+    //     {
+    //       "provider": "anthropic",
+    //       "name": "claude-3-7-sonnet-thinking-latest",
+    //       "display_name": "claude-3-7-sonnet-thinking-latest",
+    //       "max_tokens": 200000,
+    //       "max_output_tokens": 64000,
+    //       "mode": {
+    //         "type": "thinking",
+    //         "budget_tokens": 16000
+    //       },
+    //       "cache_configuration": {
+    //         "max_cache_anchors": 10,
+    //         "min_total_token": 10000,
+    //         "should_speculate": false
+    //       }
+    //     }
+    //   ],
+    //   "version": "2"
+    // }
   },
   "features": {
     //"edit_prediction_provider": "zed"
   },
   "edit_predictions": {
-    "mode": "subtle",
+    "mode": "eager",
     "delay": 500
   },
   "telemetry": {
@@ -79,8 +109,11 @@
   "vim_mode": true,
   "ui_font_family": "FiraCode Nerd Font",
   "ui_font_size": 13,
-  "buffer_font_family": "FiraCode Nerd Font",
   "buffer_font_size": 14,
+  // settings for built-in display
+  // "ui_font_size": 12,
+  // "buffer_font_size": 12,
+  "buffer_font_family": "FiraCode Nerd Font",
   "buffer_font_weight": 500,
   "git": {
     "inline_blame": {
@@ -99,7 +132,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Kanagawa-Dragon"
+    "light": "Vitesse Refined Light Soft",
+    "dark": "Vitesse Refined Dark Soft"
   }
 }

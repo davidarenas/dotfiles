@@ -135,7 +135,7 @@
       "space f n": "workspace::NewFile",
       "space /": "workspace::NewSearch",
       "space space": "file_finder::Toggle",
-      "n": "search::SelectNextMatch",
+      //"n": "search::SelectNextMatch",
       "shift-n": "search::SelectPreviousMatch",
       "g c": "editor::ToggleComments",
       "g r": "editor::FindAllReferences",
@@ -213,4 +213,3 @@
     }
   }
 ]
-

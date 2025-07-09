@@ -1,7 +1,7 @@
 export GOPATH=$HOME/go
 # If you come from bash you might have to change your $PATH.
-export PLAN9=/usr/local/plan9
 export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/coreutils/libexec/gnubin/:~/.local/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin:$PLAN9/bin:$HOME/.cargo/bin
+export PATH="$HOME/.bun/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -9,7 +9,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"
 unsetopt PROMPT_SP
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,7 +54,7 @@ unsetopt PROMPT_SP
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # zsh-syntax-highligthting must be last plugin loaded
-plugins=(git macos colored-man-pages vi-mode cp tmux web-search docker lein mvn svn npm zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git macos colored-man-pages vi-mode cp tmux web-search docker lein mvn npm zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -77,7 +77,7 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-export JAVA_HOME="$(/usr/libexec/java_home)"
+# export JAVA_HOME="$(/usr/libexec/java_home)"
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -86,20 +86,31 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias  vi='emacsclient'
-alias  vig='emacsclient -c'
-export EDITOR=emacsclient
+alias  vi='nvim '
+export EDITOR=nvim
 export SPACESHIP_BATTERY_SHOW=false
 export SPACESHIP_VI_MODE_INSERT="I|"
 export SPACESHIP_VI_MODE_NORMAL="N|"
 export SPACESHIP_VI_MODE_COLOR=241
-
+export ANTHROPIC_API_KEY=""
+export OPENROUTER_API_KEY=""
+export GOOGLE_GENERATIVE_AI_API_KEY=""
+export GOOGLE_AI_API_KEY="$GOOGLE_GENERATIVE_AI_API_KEY"
+export CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR="1"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
 
 #source ~/".oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 eval "$(starship init zsh)"
+
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
