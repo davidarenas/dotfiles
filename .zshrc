@@ -97,6 +97,8 @@ export OPENROUTER_API_KEY=""
 export GOOGLE_GENERATIVE_AI_API_KEY=""
 export GOOGLE_AI_API_KEY="$GOOGLE_GENERATIVE_AI_API_KEY"
 export CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR="1"
+export DISABLE_TELEMETRY=1
+export DISABLE_ERROR_REPORTING=1
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
